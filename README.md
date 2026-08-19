@@ -1,4 +1,4 @@
-Tio chi estas la Lens-Studio-pakajho por Snapchat-lenso "[Elsendoj (areo A)](https://www.snapchat.com/lens/71ef325bea164496913810ce16d71a56)". Ghi eligas liston de radio-elsendoj, kiuj en la tempo de la uzo de la lenso estas dissendataj en amplitudmodulado en frekvencoj de 2300 ghis 26100 kHz kaj por Europo, Afriko au sud-okcidenta Azio.
+Tio chi estas la Lens-Studio-pakajho por Snapchat-lenso "[Elsendoj (areo A)](https://www.snapchat.com/lens/71ef325bea164496913810ce16d71a56)". Ghi eligas liston de radio-elsendoj, kiuj en la tempo de la uzo de la lenso estas dissendataj en amplitudmodulado en frekvencoj de 2300 ghis 26100 kHz por Europo, Afriko au sud-okcidenta Azio.
 
 Temas pri ekstrakto el informoj donitaj en [http://www.eibispace.de](http://www.eibispace.de).
 
