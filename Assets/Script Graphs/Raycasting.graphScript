@@ -1,0 +1,833 @@
+SchemaVersion: 1
+Nodes:
+  ChildNodes:
+    Node0:
+      DependencyIndex: 0
+      LevelID: 0
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ExecutionOut:
+          ClassType2: EXECUTION
+          IOType: 1
+        Self:
+          ClassType2: TouchStartEvent
+          IOType: 1
+      PositionX: -1523
+      PositionY: -60
+      TemplateID: virtualNode
+      Title1: TouchStartEvent
+      Title2: TouchStartEvent
+    Node0CheckValue: false
+    Node0VirtualID: TouchStartEvent
+    Node1:
+      DependencyIndex: 1
+      LevelID: 2
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Class:
+          ClassType2: TouchStartEvent
+          Connection0:
+            NodeLevelID: 0
+            PortID: Self
+        Return:
+          IOType: 1
+          Variable: [0.0, 0.0]
+      PositionX: -1315
+      PositionY: -128
+      TemplateID: virtualNode
+      Title1: getTouchPosition
+      Title2: TouchStartEvent
+    Node10:
+      DependencyIndex: 18
+      LevelID: 4
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Default Value:
+          ClassType2: SceneObject
+        Group Name:
+          String: ""
+        Hint:
+          String: ""
+        Return:
+          ClassType2: SceneObject
+          IOType: 1
+        Sort Index:
+          Variable: 0
+        name:
+          String: Plane
+      PositionX: -815
+      PositionY: 787
+      TemplateID: virtualNode
+      Title1: Plane
+      Title2: SceneObject
+    Node10CheckValue: false
+    Node10VirtualID: SceneObject_input
+    Node11:
+      DependencyIndex: 19
+      LevelID: 33
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Class:
+          ClassType2: SceneObject
+          Connection0:
+            NodeLevelID: 4
+            PortID: Return
+        Return:
+          ClassType2: Transform
+          IOType: 1
+      PositionX: -675
+      PositionY: 771
+      TemplateID: virtualNode
+      Title1: getTransform
+      Title2: SceneObject
+    Node11CheckValue: false
+    Node11VirtualID: SceneObject_getTransform
+    Node12:
+      DependencyIndex: 20
+      LevelID: 25
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Class:
+          ClassType2: Transform
+          Connection0:
+            NodeLevelID: 33
+            PortID: Return
+        Return:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: -486
+      PositionY: 706
+      TemplateID: virtualNode
+      Title1: getWorldPosition
+      Title2: Transform
+    Node12CheckValue: false
+    Node12VirtualID: Transform_getWorldPosition
+    Node13:
+      DependencyIndex: 21
+      LevelID: 26
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Class:
+          ClassType2: Transform
+          Connection0:
+            NodeLevelID: 33
+            PortID: Return
+        Return:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: -448
+      PositionY: 814
+      TemplateID: virtualNode
+      Title1: getForward
+      Title2: Transform
+    Node13CheckValue: false
+    Node13VirtualID: Transform_forward_get
+    Node14:
+      DependencyIndex: 22
+      LevelID: 1
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ExecutionIn:
+          ClassType2: EXECUTION
+          Connection0:
+            NodeLevelID: 21
+            PortID: ExecutionOut
+        ExecutionOut:
+          ClassType2: EXECUTION
+          IOType: 1
+        didHit:
+          IOType: 1
+          Variable: false
+        hitPosition:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        onHit:
+          ClassType2: PARAMETER_EXECUTION void(vec3 hitPos)
+          IOType: 1
+        planeNormal:
+          Connection0:
+            NodeLevelID: 26
+            PortID: Return
+          Variable: [0.0, 0.0, 0.0]
+        planePos:
+          Connection0:
+            NodeLevelID: 25
+            PortID: Return
+          Variable: [0.0, 0.0, 0.0]
+        rayDir:
+          Connection0:
+            NodeLevelID: 7
+            PortID: import12
+          Variable: [0.0, 0.0, 0.0]
+        rayPos:
+          Connection0:
+            NodeLevelID: 7
+            PortID: import11
+          Variable: [0.0, 0.0, 0.0]
+        ref:
+          ClassType1: REFUID
+          String: "11619397659091422795:9531939627882500514"
+      PositionX: -97
+      PositionY: 113
+      TemplateID: userNode
+      Title1: RaycastToPlane
+    Node15:
+      DependencyIndex: 23
+      LevelID: 3
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ExecutionIn:
+          ClassType2: PARAMETER_EXECUTION void(vec3 hitPos)
+          Connection0:
+            NodeLevelID: 1
+            PortID: onHit
+        ExecutionOut:
+          ClassType2: EXECUTION
+          IOType: 1
+        hitPos:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: 255
+      PositionY: 138
+      TemplateID: ArgumentExecution
+      Title1: Get Arguments
+    Node15CheckValue: false
+    Node16:
+      DependencyIndex: 24
+      LevelID: 18
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Default Value:
+          ClassType2: SceneObject
+        Group Name:
+          String: ""
+        Hint:
+          String: ""
+        Return:
+          ClassType2: SceneObject
+          IOType: 1
+        Sort Index:
+          Variable: 0
+        name:
+          String: Marker
+      PositionX: 224
+      PositionY: 276
+      TemplateID: virtualNode
+      Title1: Marker
+      Title2: SceneObject
+    Node16CheckValue: false
+    Node16VirtualID: SceneObject_input
+    Node17:
+      DependencyIndex: 25
+      LevelID: 14
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Class:
+          ClassType2: SceneObject
+          Connection0:
+            NodeLevelID: 18
+            PortID: Return
+        Return:
+          ClassType2: Transform
+          IOType: 1
+      PositionX: 482
+      PositionY: 256
+      TemplateID: virtualNode
+      Title1: getTransform
+      Title2: SceneObject
+    Node17CheckValue: false
+    Node17VirtualID: SceneObject_getTransform
+    Node18:
+      DependencyIndex: 26
+      LevelID: 17
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Class:
+          ClassType2: Transform
+          Connection0:
+            NodeLevelID: 14
+            PortID: Return
+        ExecutionIn:
+          ClassType2: EXECUTION
+          Connection0:
+            NodeLevelID: 3
+            PortID: ExecutionOut
+        ExecutionOut:
+          ClassType2: EXECUTION
+          IOType: 1
+        pos:
+          Connection0:
+            NodeLevelID: 3
+            PortID: hitPos
+          Variable: [0.0, 0.0, 0.0]
+      PositionX: 691
+      PositionY: 122
+      TemplateID: virtualNode
+      Title1: setWorldPosition
+      Title2: Transform
+    Node18CheckValue: false
+    Node18VirtualID: Transform_setWorldPosition
+    Node19:
+      CommentSizeX: 555
+      CommentSizeY: 258
+      DependencyIndex: 27
+      LevelID: 27
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Create plane based on plane object
+        Tooltip:
+          String: ""
+      PositionX: -845
+      PositionY: 676
+      TemplateID: node_util_comment
+      Title1: ""
+    Node19CheckValue: false
+    Node1CheckValue: false
+    Node1VirtualID: TouchStartEvent_getTouchPosition
+    Node2:
+      DependencyIndex: 2
+      LevelID: 20
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ExecutionIn:
+          ClassType2: EXECUTION
+          Connection0:
+            NodeLevelID: 0
+            PortID: ExecutionOut
+        ExecutionOut:
+          ClassType2: EXECUTION
+          IOType: 1
+        VariableID:
+          String: "1"
+        VariableName:
+          ItemIndex: 0
+          ItemList: touchPos
+        value:
+          Connection0:
+            NodeLevelID: 2
+            PortID: Return
+          Variable: [0.0, 0.0]
+      PositionX: -1091
+      PositionY: -60
+      TemplateID: Variable_set
+      Title1: Set touchPos
+    Node20:
+      CommentSizeX: 415
+      CommentSizeY: 257
+      DependencyIndex: 28
+      LevelID: 28
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Calculate ray based on touch pos
+        Tooltip:
+          String: ""
+      PositionX: -720
+      PositionY: 340
+      TemplateID: node_util_comment
+      Title1: ""
+    Node20CheckValue: false
+    Node21:
+      CommentSizeX: 660
+      CommentSizeY: 259
+      DependencyIndex: 29
+      LevelID: 29
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: On touch move...
+        Tooltip:
+          String: ""
+      PositionX: -1557
+      PositionY: 183
+      TemplateID: node_util_comment
+      Title1: ""
+    Node21CheckValue: false
+    Node22:
+      CommentSizeX: 631
+      CommentSizeY: 236
+      DependencyIndex: 30
+      LevelID: 30
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: On touch start...
+        Tooltip:
+          String: ""
+      PositionX: -1553
+      PositionY: -158
+      TemplateID: node_util_comment
+      Title1: ""
+    Node22CheckValue: false
+    Node23:
+      CommentSizeX: 657
+      CommentSizeY: 301
+      DependencyIndex: 31
+      LevelID: 32
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: "On hit, move marker object to hit position"
+        Tooltip:
+          String: ""
+      PositionX: 225
+      PositionY: 92
+      TemplateID: node_util_comment
+      Title1: ""
+    Node23CheckValue: false
+    Node24:
+      CommentSizeX: 215
+      CommentSizeY: 276
+      DependencyIndex: 32
+      LevelID: 6
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Color:
+          ClassType1: COLOR
+          Variable: [0.4000000059604645, 0.699999988079071, 1.0, 0.10000000149011612]
+        Comment:
+          String: Perform Raycast
+        Tooltip:
+          String: ""
+      PositionX: -121
+      PositionY: 97
+      TemplateID: node_util_comment
+      Title1: ""
+    Node24CheckValue: false
+    Node2CheckValue: false
+    Node3:
+      DependencyIndex: 3
+      LevelID: 22
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ExecutionOut:
+          ClassType2: EXECUTION
+          IOType: 1
+        Self:
+          ClassType2: TouchMoveEvent
+          IOType: 1
+      PositionX: -1527
+      PositionY: 286
+      TemplateID: virtualNode
+      Title1: TouchMoveEvent
+      Title2: TouchMoveEvent
+    Node3CheckValue: false
+    Node3VirtualID: TouchMoveEvent
+    Node4:
+      DependencyIndex: 4
+      LevelID: 23
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Class:
+          ClassType2: TouchMoveEvent
+          Connection0:
+            NodeLevelID: 22
+            PortID: Self
+        Return:
+          IOType: 1
+          Variable: [0.0, 0.0]
+      PositionX: -1313
+      PositionY: 213
+      TemplateID: virtualNode
+      Title1: getTouchPosition
+      Title2: TouchMoveEvent
+    Node4CheckValue: false
+    Node4VirtualID: TouchMoveEvent_getTouchPosition
+    Node5:
+      DependencyIndex: 5
+      LevelID: 24
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ExecutionIn:
+          ClassType2: EXECUTION
+          Connection0:
+            NodeLevelID: 22
+            PortID: ExecutionOut
+        ExecutionOut:
+          ClassType2: EXECUTION
+          IOType: 1
+        VariableID:
+          String: "1"
+        VariableName:
+          ItemIndex: 0
+          ItemList: touchPos
+        value:
+          Connection0:
+            NodeLevelID: 23
+            PortID: Return
+          Variable: [0.0, 0.0]
+      PositionX: -1066
+      PositionY: 304
+      TemplateID: Variable_set
+      Title1: Set touchPos
+    Node5CheckValue: false
+    Node6:
+      DependencyIndex: 6
+      LevelID: 21
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        ExecutionIn:
+          ClassType2: EXECUTION
+          Connection0:
+            NodeLevelID: 20
+            PortID: ExecutionOut
+          Connection1:
+            NodeLevelID: 24
+            PortID: ExecutionOut
+        ExecutionOut:
+          ClassType2: EXECUTION
+          IOType: 1
+      PositionX: -530
+      PositionY: 179
+      RedirectClassTypeA1: LINK
+      RedirectClassTypeA2: EXECUTION
+      RedirectClassTypeB1: LINK
+      RedirectClassTypeB2: EXECUTION
+      TemplateID: nodes_passthrough
+      Title1: Passthrough
+    Node6CheckValue: false
+    Node7:
+      DependencyIndex: 7
+      LevelID: 5
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Default Value:
+          ClassType2: Camera
+        Group Name:
+          String: ""
+        Hint:
+          String: ""
+        Return:
+          ClassType2: Camera
+          IOType: 1
+        Sort Index:
+          Variable: 0
+        name:
+          String: Camera
+      PositionX: -663
+      PositionY: 404
+      TemplateID: virtualNode
+      Title1: Camera
+      Title2: Camera
+    Node7CheckValue: false
+    Node7VirtualID: Camera_input
+    Node8:
+      DependencyIndex: 8
+      LevelID: 19
+      NodeCount: 0
+      NodeType: 1
+      Ports:
+        Return:
+          IOType: 1
+          Variable: [0.0, 0.0]
+        VariableID:
+          String: "1"
+        VariableName:
+          ItemIndex: 0
+          ItemList: touchPos
+      PositionX: -690
+      PositionY: 495
+      TemplateID: Variable_get
+      Title1: Get touchPos
+    Node8CheckValue: false
+    Node9:
+      ChildNodes:
+        Node0:
+          DependencyIndex: 9
+          LevelID: 8
+          NodeCount: 0
+          NodeType: 1
+          Ports:
+            AsTopLevel:
+              Variable: false
+            Import:
+              ClassType2: Camera
+            Return:
+              ClassType2: Camera
+              IOType: 1
+            Sort Index:
+              Variable: 0
+            name:
+              String: Camera
+          PositionX: -230
+          PositionY: 40
+          TemplateID: virtualNode
+          Title1: Camera
+          Title2: Camera
+        Node0CheckValue: false
+        Node0VirtualID: Camera_input
+        Node1:
+          DependencyIndex: 10
+          LevelID: 9
+          NodeCount: 0
+          NodeType: 1
+          Ports:
+            AsTopLevel:
+              Variable: false
+            Import:
+              Variable: [0.0, 0.0]
+            Return:
+              IOType: 1
+              Variable: [0.0, 0.0]
+            Sort Index:
+              Variable: 0
+            name:
+              String: Screen Point
+          PositionX: -228
+          PositionY: 182
+          TemplateID: vec2_input
+          Title1: Screen Point
+        Node1CheckValue: false
+        Node2:
+          DependencyIndex: 11
+          LevelID: 10
+          NodeCount: 0
+          NodeType: 1
+          Ports:
+            Class:
+              ClassType2: Camera
+              Connection0:
+                NodeLevelID: 8
+                PortID: Return
+            Return:
+              IOType: 1
+              Variable: [0.0, 0.0, 0.0]
+            absoluteDepth:
+              Variable: 0.0
+            normalizedScreenSpacePoint:
+              Connection0:
+                NodeLevelID: 9
+                PortID: Return
+              Variable: [0.0, 0.0]
+          PositionX: 120
+          PositionY: -40
+          TemplateID: virtualNode
+          Title1: screenSpaceToWorldSpace
+          Title2: Camera
+        Node2CheckValue: false
+        Node2VirtualID: Camera_screenSpaceToWorldSpace
+        Node3:
+          DependencyIndex: 12
+          LevelID: 11
+          NodeCount: 0
+          NodeType: 1
+          Ports:
+            Export:
+              IOType: 1
+              Variable: [0.0, 0.0, 0.0]
+            Sort Index:
+              Variable: 0
+            name:
+              String: Ray Position
+            output:
+              Connection0:
+                NodeLevelID: 10
+                PortID: Return
+              Variable: [0.0, 0.0, 0.0]
+          PositionX: 558
+          PositionY: -74
+          TemplateID: vec3_output
+          Title1: Ray Position
+        Node3CheckValue: false
+        Node4:
+          DependencyIndex: 13
+          LevelID: 13
+          NodeCount: 0
+          NodeType: 1
+          Ports:
+            Class:
+              ClassType2: Camera
+              Connection0:
+                NodeLevelID: 8
+                PortID: Return
+            Return:
+              IOType: 1
+              Variable: [0.0, 0.0, 0.0]
+            absoluteDepth:
+              Variable: 1.0
+            normalizedScreenSpacePoint:
+              Connection0:
+                NodeLevelID: 9
+                PortID: Return
+              Variable: [0.0, 0.0]
+          PositionX: 120
+          PositionY: 110
+          TemplateID: virtualNode
+          Title1: screenSpaceToWorldSpace
+          Title2: Camera
+        Node4CheckValue: false
+        Node4VirtualID: Camera_screenSpaceToWorldSpace
+        Node5:
+          DependencyIndex: 14
+          LevelID: 16
+          NodeCount: 0
+          NodeType: 1
+          Ports:
+            Class:
+              Connection0:
+                NodeLevelID: 13
+                PortID: Return
+              Variable: [0.0, 0.0, 0.0]
+            Return:
+              IOType: 1
+              Variable: [0.0, 0.0, 0.0]
+            vec:
+              Connection0:
+                NodeLevelID: 10
+                PortID: Return
+              Variable: [0.0, 0.0, 0.0]
+          PositionX: 550
+          PositionY: 50
+          TemplateID: virtualNode
+          Title1: sub
+          Title2: vec3
+        Node5CheckValue: false
+        Node5VirtualID: vec3_sub
+        Node6:
+          DependencyIndex: 15
+          LevelID: 15
+          NodeCount: 0
+          NodeType: 1
+          Ports:
+            Class:
+              Connection0:
+                NodeLevelID: 16
+                PortID: Return
+              Variable: [0.0, 0.0, 0.0]
+            Return:
+              IOType: 1
+              Variable: [0.0, 0.0, 0.0]
+          PositionX: 711
+          PositionY: 54
+          TemplateID: virtualNode
+          Title1: normalize
+          Title2: vec3
+        Node6CheckValue: false
+        Node6VirtualID: vec3_normalize
+        Node7:
+          DependencyIndex: 16
+          LevelID: 12
+          NodeCount: 0
+          NodeType: 1
+          Ports:
+            Export:
+              IOType: 1
+              Variable: [0.0, 0.0, 0.0]
+            Sort Index:
+              Variable: 0
+            name:
+              String: Ray Direction
+            output:
+              Connection0:
+                NodeLevelID: 15
+                PortID: Return
+              Variable: [0.0, 0.0, 0.0]
+          PositionX: 887
+          PositionY: 56
+          TemplateID: vec3_output
+          Title1: Ray Direction
+        Node7CheckValue: false
+      DependencyIndex: 17
+      LevelID: 7
+      NodeType: 3
+      Ports:
+        Title1:
+          String: ScreenPointToRay
+        Title2:
+          String: ""
+        import11:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        import12:
+          IOType: 1
+          Variable: [0.0, 0.0, 0.0]
+        import8:
+          ClassType2: Camera
+          Connection0:
+            NodeLevelID: 5
+            PortID: Return
+        import9:
+          Connection0:
+            NodeLevelID: 19
+            PortID: Return
+          Variable: [0.0, 0.0]
+      PositionX: -504
+      PositionY: 370
+      TemplateID: nodes_main_subgraph
+      Title1: ScreenPointToRay
+    Node9CheckValue: false
+  IsSubGraph0: true
+  IsSubGraph1: true
+  IsSubGraph2: true
+  IsSubGraph3: true
+  LevelID: 0
+  NodeType: 3
+  PositionX: 0
+  PositionY: 0
+  TemplateID: nodes_main_subgraph
+  Title1: ""
+Property:
+  Variable1:
+    Variables:
+      Array: false
+      CategeoryList: "Value : Array : Map"
+      CategoryCount: 3
+      CategoryIndex: 0
+      CategoryName: Value
+      ID: "1"
+      Name: touchPos
+      TypeItemCount: 1063
+      TypeItemIndex: 9
+      TypeItemList: "bool : Number : string : Object : Callback void() : mat2 : mat3 : mat4 : quat : vec2 : vec3 : vec4 : vec4b : AbstractData : AccessLevel : Accuracy : AdditionalParam : AiPackAsset : AimVectors : Alignment : AlignmentType : AnalyticsSystem : Anchor : Anchor : AnchorComponent : AnchorLocationModule : AnchorModule : AnchorScope : AnchorSession : AnchorSession : AnchorSessionOptions : AnchorTrackingState : AnchorType : AnimatedTextureFileProvider : Animation : AnimationAsset : AnimationClip : AnimationCurve : AnimationCurveTrack : AnimationEventRegistration : AnimationEventTrack : AnimationKeyFrame : AnimationLayer : AnimationLayerBlendMode : AnimationLayerOnEventArgs : AnimationLayerScaleMode : AnimationMixer : AnimationMixerLayer : AnimationParams : AnimationPlayer : AnimationPlayerOnEventArgs : AnimationPropertyEventRegistration : AnimationPropertyLayer : AnimationPropertyTrack : AnimationTrack : Answer : AnswerStatusCodes : AntialiasingMode : AntialiasingQuality : AnyData : AsrMode : AsrModule : AsrStatusCode : AsrStreamType : AsrTranscriptionOptions : Asset : AssetSystem : AudioComponent : AudioEffectAsset : AudioEffectComponent : AudioEffectProvider : AudioListenerComponent : AudioOutputProvider : AudioSystem : AudioTrackAsset : AudioTrackProvider : AvatarScope : Axis : Backend : BackgroundLock : BackgroundSettings : BaseBodyParams : BaseMeshVisual : BaseMultiplayerSessionOptions : BaseNeuralFaceEffectTextureProvider : BaseNlpModel : BaseNlpResponse : BasePlaceholder : BaseRenderTarget : BasicTransform : BatteryStateArgs : BendMode : BillboardVisual : BinAsset : BinFileProvider : BitmapGlyph : Bitmoji2DOptions : Bitmoji2DResource : Bitmoji3DOptions : Bitmoji3DResource : BitmojiModule : BitmojiStickerType : BitmojiSystem : BitmojiTextureProvider : BlendFactor : BlendMode : BlendOperation : BlendShapes : BlendState : Blob : BluetoothCentralModule : BluetoothGatt : BluetoothGattCharacteristic : BluetoothGattDescriptor : BluetoothGattService : BlurNoiseEstimation : BodyComponent : BodyDepthTextureProvider : BodyInstanceSegmentationTextureProvider : BodyNormalsTextureProvider : BodyRenderObjectProvider : BodyTrackingAsset : BodyTrackingAssetOptions : BodyType : BorderType : BoundedVideoTextureProvider : BoundingBox : BoxShape : BreastType : BrowsLoweredEvent : BrowsRaisedEvent : BrowsReturnedToNormalEvent : BufferAsset : Builder : BuildingConfiguration : CalibrationStatus : CameoAsset : CameoSelfie : CameoTextureProvider : CameosPerformanceMode : CameosRecoloring : CameosSystem : Camera : CameraBackEvent : CameraDistortionType : CameraFrame : CameraFrontEvent : CameraId : CameraImageProvider : CameraInsertionOrdering : CameraLocation : CameraMaskChannel : CameraModule : CameraObservation : CameraRawModule : CameraRequest : CameraRollMedia : CameraRollMediaType : CameraRollModule : CameraTextureProvider : CameraType : CandideUpdatedEvent : Canvas : CapitilizationOverride : CapsuleShape : CaptureSession : Category : ClearColorOption : ClearScreen : Client : ClientInterfaceAction : ClientInterfaceActionTakenEvent : ClientInterfaceComponent : ClientInterfaceElement : ClientInterfaceSystem : ClientOptions : ClipboardModule : ClothVisual : ClothingType : CloudStorageListOptions : CloudStorageModule : CloudStorageOptions : CloudStorageReadOptions : CloudStorageSubscriptionOptions : CloudStorageWriteOptions : CloudStore : ColliderComponent : Collision : CollisionEnterEventArgs : CollisionExitEventArgs : CollisionMesh : CollisionStayEventArgs : ColocatedLandmarks2DRenderObjectProvider : ColocatedLandmarks3DRenderObjectProvider : ColocatedLandmarksRenderObjectProviderBase : ColocatedTrackingComponent : ColorRenderTarget : ColorSpace : Colorspace : CommerceKitModule : Component : ComponentDisabledEvent : ComponentEnabledEvent : ComponentEvent : CompositionLayerComponent : CompositionLayerRenderComponent : CompositorConfig : CompressionQuality : ComputeGraph : ConeShape : ConfigKey : ConnectedLensEnteredEvent : ConnectedLensModule : ConnectedLensSessionOptions : ConnectionInfo : Constraint : ConstraintComponent : ConstraintType : Contact : Content : CoreMLModule : CoreVersionChecks : CreateOptions : CropTextureProvider : CubemapFace : CullMode : CursorPosition : CustomAsset : CustomClientUIActionEvent : CustomLocationBuilder : CustomLocationGroupBuilder : CustomLocationGroupComponent : CustomLocationScan : CustomObject3DAsset : CustomObject3DSpecificData : CustomParams : CustomVariationStyle : CylinderShape : DataComponent : DataLayout : DataStoreComponent : DataStoreWithScene : DataStoreWrapper : DataType : DateTime : DebugMode : DebugRender : DeepLinkModule : DeepLinkUriReceivedArgs : DeformingCollisionMesh : Delay : DelayBuilder : DelayedCallbackEvent : Delta : DeltaBuilder : DepthBufferMode : DepthBufferUsage : DepthClearOption : DepthExtractionModel : DepthFrameData : DepthFrameSession : DepthMeshBuilder : DepthModule : DepthProcessingOptions : DepthSetter : DepthStencilRenderTarget : DepthStencilRenderTargetProvider : DepthTextureProvider : DeviceCamera : DeviceConfig : DeviceDependentBinFileProvider : DeviceInfoSystem : DeviceLocationTrackingComponent : DeviceMotion : DeviceProperty : DeviceTracking : DeviceTrackingMode : DeviceTrackingModule : DeviceUIAction : DeviceUIElement : DialogModule : DirectMultiplayerSessionOptions : DirectivityEffect : DistanceCurveType : DistanceEffect : DomainInfo : DopplerEffect : DoubleTapEvent : DoubleTapEventArgs : DropshadowSettings : DynamicEnvLight : DynamicMeshRenderObjectProvider : DynamicResource : Effect : EncodingType : EntryPointInsertionOrdering : EnvironmentMapTextureProvider : EqualCameraOrderStrategy : EventPropertyTrack : EventRegistration : ExperimentSystem : ExtendedTrackingMode : ExternalEvent : ExternalMusicInfo : ExternalMusicModule : ExternalStreamTextureProvider : ExtrudedMeshBuilder : Eye : EyeColorVisual : EyeIndex : EyeToRender : FaceCropTextureProvider : FaceFoundEvent : FaceImagePickerTextureProvider : FaceInsetVisual : FaceLostEvent : FaceMaskVisual : FaceMeshSource : FaceNeutralityDataSender : FaceRenderObjectProvider : FaceSegmentationPostprocessor : FaceStretchAlgorithm : FaceStretchBatchingStrategy : FaceStretchVisual : FaceTextureProvider : FaceTrackingEvent : FaceTrackingMode : FaceTrackingModule : FaceTrackingScope : FacelessTextureProvider : FalloffType : FileAudioTrackProvider : FileBasedMarkerProvider : FileLicensedSoundProvider : FileTextureProvider : FillRule : Filter : FilteringMode : FixedCollisionMesh : FixedConstraint : FloatAnimationPropertyTrack : FloatAnimationTrack : FloatAnimationTrackKeyFramed : FloatBezierAnimationTrackKeyFramed : FloatCurveAnimationPropertyTrack : FocusEndEventArgs : FocusStartEventArgs : Font : FontCollection : FontCollectionEntry : FontFamily : FontFamilyEntry : ForceMode : Frame : FrameTiming : Friend : FriendSystem : FrustumCullMode : GalleryType : GaussianSplattingAsset : GaussianSplattingTextures : GaussianSplattingVisual : Gender : GeneralDataStore : GeoData : GeoEntity : GeoLocationAccuracy : GeoObject : GeoPosition : GeoStorageModule : GeoStore : GeometryType : GestureModule : GesturesDataArgs : GltfAsset : GltfSettings : Glyph : GlyphLoader : GlyphMeshBuilder : GlyphOutlineEdge : GlyphOutlineShape : GlyphOutlineShapes : GlyphPosition : GlyphsAndPositions : GrabBeginArgs : GrabEndArgs : GradientKind : GraphicsApi : GridMeshBuilder : Gyroscope : HRTFMode : HairDataAsset : HairVisual : HandRenderObjectProvider : HandSpecificData : HandTracking3DAsset : HandTracking3DAssetOptions : HandTrackingScope : HandType : HandType : HandType : HapticFeedback : HapticFeedbackSystem : HapticFeedbackType : HapticRequest : Head : Headers : HingeConstraint : HingeLimitSettings : HingeMotorSettings : HingeMotorType : HingeMotorType : HintsComponent : HistogramData : HitTestSession : HitTestSessionOptions : HoleMode : HorizontalAlignment : HorizontalOverflow : HostUpdateInfo : HoverEndEvent : HoverEndEventArgs : HoverEvent : HoverEventArgs : HoverStartEvent : HoverStartEventArgs : HttpRequestMethod : IEventParameters : Image : ImageFormat : ImageFrame : ImageInput : ImagePickerTextureProvider : ImageProvider : ImageRequest : ImageUploadCompressionMethod : ImageUploadOptions : ImageValue : InferenceMode : InferenceNode : Inpainting : Input : InputBuilder : InputPlaceholder : InputStreamType : IntAnimationPropertyTrack : IntAnimationTrack : IntStepAnimationPropertyTrack : IntStepAnimationTrackKeyFramed : IntStepNoLerpAnimationTrackKeyFramed : InteractionComponent : InternalMeshBuilderConfig : InternetModule : InternetStatusChangedArgs : IsPhoneInHandBeginArgs : IsPhoneInHandEndArgs : Item : ItemRepresentation : JoinContext : JoinType : JsonAsset : KeyModifiers : KeyPressEvent : KeyReleaseEvent : KeyboardKind : KeyboardOptions : KeyboardTrackingOptions : KeyboardType : Keypoint : Keys : KeywordModelGroup : KissFinishedEvent : KissStartedEvent : Label : LandmarkersSystem : LateUpdateEvent : LayerConfig : LayerSet : Leaderboard : LeaderboardModule : LegacyFaceMeshProvider : LensEntryPoint : LevelsetColliderAsset : LevelsetShape : LicensedAudioTrackAsset : LightSource : LightType : LineCap : LineJoin : LiquifyVisual : ListeningErrorEventArgs : ListeningOptions : ListeningUpdateEventArgs : LiveVideoStreamTextureProvider : LoadStatus : LocalizationModel : LocalizationSystem : LocalizationsAsset : LocatedAtComponent : Location : LocationAsset : LocationCloudStorageModule : LocationCloudStorageOptions : LocationCloudStore : LocationLandmarksRenderObjectProvider : LocationMarkerProvider : LocationProximityStatus : LocationRenderObjectProvider : LocationService : LocationSystem : LocationTextureProvider : LocationType : LongPressEndEvent : LongPressEndEventArgs : LongPressStartEvent : LongPressStartEventArgs : LongRunningTaskModule : LookAtComponent : LookAtMode : LowPinchSensitivityToken : Lyrics : LyricsLine : LyricsSync : LyricsTracker : LyricsType : MFCC : MFCCBuilder : MLAsset : MLComponent : MSAAStrategy : ManipulateComponent : ManipulateEndEvent : ManipulateEndEventArgs : ManipulateFrameIntersectResult : ManipulateStartEvent : ManipulateStartEventArgs : ManipulateType : MapHandler : MapHandlerRequest : MapLayerType : MapModule : MapTextureProvider : MappingOptions : MappingScope : MappingSession : MappingThrottling : MarkerAsset : MarkerProvider : MarkerTrackingComponent : MaskTextureProvider : MaskingComponent : MatchmakingConfig : Material : MaterialMeshVisual : MaterialPropertyOverrides : Matter : MediaContentType : MediaPickerMode : MediaPickerTextureProvider : MelSpectrogram : MelSpectrogramBuilder : MeshBuilder : MeshClassificationFormat : MeshIndexType : MeshMode : MeshRenderObjectProvider : MeshShadowMode : MeshShape : MeshTopology : MeshType : MessageEvent : MetadataKey : MicrophoneAudioProvider : MicrophoneRawModule : Mobility : ModeOfAction : ModelState : MotionController : MotionControllerModule : MotionControllerOptions : MotionType : MouthClosedEvent : MouthOpenedEvent : MultiplayerSession : MultiplayerSystem : NamedInstanceInfo : NamedValues : NativeARTrackingState : NativeLibraryAsset : NativePlaneTrackingType : NativeSpatialAnchorResult : NaturalFeatureMarkerProvider : NeuralFaceEffectTextureProvider : NeuralSnapEffectTextureProvider : NlpCommandResponse : NlpIntentModel : NlpIntentResponse : NlpKeywordModel : NlpKeywordResponse : NlpResponseStatus : NlpResponsesStatusCodes : Node : NoiseReduction : NoiseReductionBuilder : OAuth2Status : OS : Object3DAsset : ObjectOrderingInGroup : ObjectPrefab : ObjectSpecificData : ObjectTracking : ObjectTracking3D : ObjectTrackingAsset : ObjectTrackingEndEvent : ObjectTrackingEvent : ObjectTrackingMaskedTextureProvider : ObjectTrackingNormalsTextureProvider : ObjectTrackingStartEvent : ObjectTrackingSystem : ObjectTrackingTextureProvider : OffsetAdjustType : OffsetUnit : OnAwakeEvent : OnDestroyEvent : OnDidEnterBackgroundEvent : OnDidEnterForegroundEvent : OnDidEnterSuspendedEvent : OnDisableEvent : OnEnableEvent : OnFullScreenEnterEvent : OnFullScreenExitEvent : OnPauseEvent : OnResumeEvent : OnStartEvent : OnTimeStartEvent : OnWillEnterBackgroundEvent : OnWillEnterForegroundEvent : OnWillEnterSuspendedEvent : OptimizationParams : Options : Options : OrderingType : Orientation : OutlineGlyph : OutlineSettings : Output : OutputBuilder : OutputMode : OutputPlaceholder : OutputResolution : OutputResolution : Overlap : OverlapEnterEventArgs : OverlapExitEventArgs : OverlapStayEventArgs : OverlayLayer : Ownership : PalmTapDownArgs : PalmTapUpArgs : PanEndEventArgs : PanGestureEndEvent : PanGestureMoveEvent : PanGestureStartEvent : PanMoveEventArgs : PanStartEventArgs : PanType : ParamSet : Parameters : Parameters : Parameters : ParticlesAsset : ParticlesVisual : Pass : PassPropertyOverrides : PassUniformsBuffer : PassWrapper : PassWrappers : PerformanceIndexes : Permission : Persistence : PersistentStorageSystem : PersonTrackingScope : PhonemeInfo : PinToMeshComponent : PinchDownArgs : PinchEndEventArgs : PinchGestureEndEvent : PinchGestureMoveEvent : PinchGestureStartEvent : PinchMoveEventArgs : PinchStartEventArgs : PinchStrengthArgs : PinchUpArgs : Pipeline : PitchShifter : PitchShifterBuilder : PlaybackMode : PlaybackMode : PointCloud : PointConstraint : PosePredictionModule : PosePredictor : PositionEffect : PostEffectVisual : PostInfinity : PostProcessingAction : PostProcessingActionResponse : PostProcessingActionResponseStatus : Posture : Price : PricingPhase : Probe : ProceduralMeshRenderObjectProvider : ProceduralTextureProvider : ProcessedLocationModule : ProcessingMode : Product : ProductType : Properties : PropertyOverrides : Provider : ProxyTextureProvider : Purchase : PurchaseResult : PurchaseState : QnaAction : QnaResponse : QualityLevel : QuatAnimationPropertyTrack : QuaternionAnimationTrack : QuaternionAnimationTrackKeyFramed : QuaternionAnimationTrackXYZEuler : QueryGeoStorageOptions : RangeType : RawLocationModule : RayCastHit : RayTracingDebugSettings : RayTracingEffectSettings : RayTracingSettings : RealtimeStoreCreateOptions : RealtimeStoreCreationInfo : RealtimeStoreDeleteInfo : RealtimeStoreKeyRemovalInfo : RealtimeStoreOwnershipUpdateInfo : RealtimeStoreUpdateInfo : RecordingState : Rect : RectCropTextureProvider : RectangleSetter : RecurrenceMode : RemoteApiRequest : RemoteApiResponse : RemoteMediaModule : RemoteReferenceAsset : RemoteServiceHttpRequest : RemoteServiceHttpResponse : RemoteServiceModule : RenderAPICameraJS : RenderAPIJS : RenderAPIObjectJS : RenderAPITargetJS : RenderEntryPointJS : RenderGroupJS : RenderMesh : RenderMeshVisual : RenderObjectProvider : RenderObjectWithLayerJS : RenderObjectWithMaterialJS : RenderObjectWithMeshJS : RenderObjectWithSceneObjectJS : RenderObjectWithVisualJS : RenderRequest : RenderTargetProvider : RenderTargetStrategy : RenderingSpace : ReprojectionPlaneMode : ReprojectionPlaneSpace : Request : RequestType : ResamplingQuality : ResizeParameters : Response : ResponseCode : RestrictedResource : RestrictionComponent : Result : RetouchVisual : RetrievalOptions : ReturnKeyType : ReverseCameraTextureProvider : RotatedRect : RotationOptions : Rotator : RuntimeBundle : RuntimeBundleInstantiator : SafeSnapchatUser : Sampler : SamplerBuilder : SamplerWrapper : SamplerWrappers : SaveOptions : ScanFilter : ScanModule : ScanResult : ScanSettings : SceneActivityPhase : SceneConfig : SceneEvent : SceneIntelligenceSystem : SceneObject : SceneObjectEvent : SceneRecognition : ScreenRegionComponent : ScreenRegionType : ScreenTextureProvider : ScreenTransform : ScriptAsset : ScriptComponent : ScriptObject : ScriptScene : ScrollEndEventArgs : ScrollEventArgs : ScrollStartEventArgs : Segmentation : SegmentationMask : SegmentationModel : SegmentationTextureProvider : SelectEndEventArgs : SelectStartEventArgs : SemanticVersion : SequentialTextureProvider : SerializableWithUID : SerializationSystem : SessionCreationType : SessionInfo : SessionMode : SessionShareType : Settings : ShadowMapQuality : ShadowType : Shape : ShoppingLoadingIndicator : ShoppingModule : ShowOptions : SideTextureMode : Skin : SkinSample : SmileFinishedEvent : SmileStartedEvent : SnapImageCaptureEvent : SnapRecordStartEvent : SnapRecordStopEvent : SnapRecordingSystem : SnapchatFriendUserInfo : SnapchatGroup : SnapchatUser : SnapchatUserBirthday : SnapcodeFoundEvent : SnapcodeMarkerProvider : SnappablesSession : SnappablesSystem : SortOrder : SortingType : SoundSync : SoundSyncBeat : SoundSyncTracker : SpatialAudio : SpectaclesHandSpecificData : SpectaclesMobileKitModule : SpectaclesMobileKitSession : Spectrogram : SpectrogramBuilder : SpeechContext : SphereShape : SplineComponent : SpreadMode : SpriteAligner : SpriteVisual : StateInfo : StencilClearOption : StencilFace : StencilFunction : StencilOperation : StencilState : StereoCameraModule : StereoEffect : StorageOptions : StorageScope : StrandNeighbourSearchType : StreamConfig : StreamConfigOverrides : StreamFilter : StreamInfo : StreamPlayerComponent : StreamStatus : StreamingSession : StretchMode : StretchPoint : SubscriptionOfferDetails : SubscriptionUpdateParams : SupabaseModule : SupabaseProject : Surface : SurfaceOptions : SystemInterfaceElement : TangentType : TapEvent : TapEventArgs : TargetingDataArgs : Tensor : TensorInput : TensorOutput : TensorValue : Text : Text3D : Text3DExtrudeDirection : TextDecoder : TextEncoder : TextFieldAction : TextFill : TextFillMode : TextInputModule : TextInputSystem : TextProvider : TextToSpeechModule : TextUpdate : Texture : TextureFormat : TextureMeshBuilder : TextureProvider : TextureStretchMode : TextureTrackingScope : TextureType : TextureUsage : ThresholdMethod : TileZone : TouchDataProvider : TouchEndEvent : TouchEndEventArgs : TouchMoveEvent : TouchMoveEventArgs : TouchPhase : TouchStartEvent : TouchStartEventArgs : TouchState : TrackedMesh : TrackedMeshFaceClassification : TrackedMeshHistogramResult : TrackedMeshHitTestResult : TrackedObject : TrackedPlane : TrackedPlaneHitTestResult : TrackedPlaneOrientation : TrackedPoint : TrackedPointComponent : TrackerMode : TrackerType : TrackingMode : TrackingMode : TrackingQuality : TrackingScope : TrackingStatus : TranscriptionErrorEventArgs : TranscriptionOptions : TranscriptionUpdateEvent : TranscriptionUpdateEventArgs : Transform : Transformer : TransformerBuilder : TransformerRotation : TriangleHit : TriggerPrimaryEvent : TriggerPrimaryEventArgs : TurnOffEvent : TurnOnEvent : Type : UnitType : UpdateEvent : UpdateLimit : UpdateMode : UpperBodyRenderObjectProvider : UpperBodyTrackingAsset : UriSystem : UserActivityModule : UserContextSystem : UserInfo : UserInfoSystem : UserLocationInfo : UserRecord : UsersType : VFXAsset : VFXComponent : VFXRefObjectType : Value : VariationAxisInfo : Vec2AnimationTrack : Vec2AnimationTrackKeyFramed : Vec3AnimationPropertyTrack : Vec3AnimationTrack : Vec3AnimationTrackKeyFramed : Vec3AnimationTrackXYZ : Vec3CurveAnimationPropertyTrack : Vec4AnimationTrack : Vec4AnimationTrackKeyFramed : VectorComposite : VectorCompositeBuilder : VectorGradient : VectorGradientBuilder : VectorPaint : VectorPath : VectorPathBuilder : VectorRenderer : VectorStroke : VectorStrokeBuilder : VectorText : VectorTextBuilder : VertexCache : VertexSimulationSettings : VerticalAlignment : VerticalOverflow : VideoRecorder : VideoRecorderComponent : VideoStatus : VideoTextureProvider : Visual : VoiceMLModule : VoiceStyles : VoxelDataAsset : VoxelDataComponent : Weather : WeatherCondition : WeatherSystem : WebSocket : WebSocketCloseEvent : WebSocketEvent : WebSocketMessageEvent : WebSocketOptions : WeightedMode : WordInfo : WorldAnchor : WorldComponent : WorldCursorSegmentationModule : WorldCursorSegmentationSession : WorldDepthTextureProvider : WorldOptions : WorldQueryHitTestResult : WorldQueryModule : WorldRenderObjectProvider : WorldSettingsAsset : WorldTrackingCapabilities : WorldTrackingMeshesAddedEvent : WorldTrackingMeshesRemovedEvent : WorldTrackingMeshesUpdatedEvent : WorldTrackingModeChangedEvent : WorldTrackingPlanesAddedEvent : WorldTrackingPlanesRemovedEvent : WorldTrackingPlanesUpdatedEvent : WorldTrackingResetEvent : WorldUnderstandingModule : WorldUpVector : WrapMode : WritePermissions : Zodiac"
+      TypeItemName: vec2
+      ValueTypeItemCount: 1
+      ValueTypeItemIndex: 0
+      ValueTypeItemList: "bool : Number : string : Object : mat2 : mat3 : mat4 : quat : vec2 : vec3 : vec4 : vec4b : AimVectors : AnimatedTextureFileProvider : Animation : AnimationLayer : AnimationMixer : AnimationMixerLayer : AnimationTrack : Asset : AudioComponent : AudioEffectAsset : AudioEffectComponent : AudioEffectProvider : AudioListenerComponent : AudioOutputProvider : AudioTrackAsset : AudioTrackProvider : BackgroundSettings : BaseMeshVisual : BaseMultiplayerSessionOptions : BasePlaceholder : BaseRenderTarget : BasicTransform : BendMode : BinAsset : BinFileProvider : BlendMode : BlendShapes : BodyRenderObjectProvider : BodyTrackingAsset : BrowsLoweredEvent : BrowsRaisedEvent : BrowsReturnedToNormalEvent : BufferAsset : Camera : CameraBackEvent : CameraFrontEvent : ClearColorOption : ClearScreen : ClothVisual : ColocatedLandmarks2DRenderObjectProvider : ColocatedLandmarks3DRenderObjectProvider : ColocatedLandmarksRenderObjectProviderBase : ColocatedTrackingComponent : ColorRenderTarget : Colorspace : Component : ConnectedLensEnteredEvent : ConnectedLensModule : ConnectedLensSessionOptions : CropTextureProvider : CullMode : Delay : DelayBuilder : DelayedCallbackEvent : Delta : DeltaBuilder : DepthBufferMode : DepthSetter : DepthTextureProvider : DeviceCamera : DeviceInfoSystem : DeviceLocationTrackingComponent : DeviceProperty : DeviceTracking : DeviceTrackingMode : DirectMultiplayerSessionOptions : DirectivityEffect : DistanceCurveType : DistanceEffect : DropshadowSettings : DynamicMeshRenderObjectProvider : EventRegistration : EyeColorVisual : FaceCropTextureProvider : FaceFoundEvent : FaceImagePickerTextureProvider : FaceInsetVisual : FaceLostEvent : FaceMaskVisual : FaceRenderObjectProvider : FaceStretchVisual : FaceTextureProvider : FaceTrackingEvent : FileAudioTrackProvider : FileBasedMarkerProvider : FileTextureProvider : FilteringMode : FloatAnimationTrack : FloatAnimationTrackKeyFramed : FloatBezierAnimationTrackKeyFramed : FocusEndEventArgs : FocusStartEventArgs : Font : FrameTiming : GeneralDataStore : Gyroscope : HairDataAsset : HairSimulationColliderAsset : HairSimulationColliderComponent : HairVisual : HandSpecificData : Head : HintsComponent : HorizontalAlignment : HorizontalOverflow : IEventParameters : Image : ImagePickerTextureProvider : InferenceMode : InputBuilder : InputPlaceholder : IntAnimationTrack : IntStepAnimationTrackKeyFramed : IntStepNoLerpAnimationTrackKeyFramed : InteractionComponent : KissFinishedEvent : KissStartedEvent : Label : LateUpdateEvent : LayerSet : LightSource : LiquifyVisual : LoadStatus : LocalizationSystem : LocationAsset : LocationMarkerProvider : LocationProximityStatus : LookAtComponent : LookAtMode : MFCC : MFCCBuilder : MLAsset : MLComponent : ManipulateComponent : ManipulateEndEvent : ManipulateEndEventArgs : ManipulateFrameIntersectResult : ManipulateStartEvent : ManipulateStartEventArgs : ManipulateType : MarkerAsset : MarkerProvider : MarkerTrackingComponent : Material : MaterialMeshVisual : MediaPickerTextureProvider : MelSpectrogram : MelSpectrogramBuilder : MeshBuilder : MeshClassificationFormat : MeshIndexType : MeshTopology : MicrophoneAudioProvider : ModelState : MouthClosedEvent : MouthOpenedEvent : MultiplayerSession : NativePlaneTrackingType : NaturalFeatureMarkerProvider : OS : Object3DAsset : ObjectPrefab : ObjectSpecificData : ObjectTracking : ObjectTracking3D : ObjectTrackingAsset : ObjectTrackingTextureProvider : OnAwakeEvent : OnStartEvent : OnTimeStartEvent : Orientation : OutlineSettings : OutputBuilder : OutputMode : OutputPlaceholder : Pass : PassWrapper : PassWrappers : PerformanceIndexes : PersistentStorageSystem : PinToMeshComponent : PositionEffect : PostEffectVisual : PostInfinity : Prefab : ProceduralMeshRenderObjectProvider : ProceduralTextureProvider : Properties : Provider : QuaternionAnimationTrack : QuaternionAnimationTrackKeyFramed : QuaternionAnimationTrackXYZEuler : RangeType : Rect : RectCropTextureProvider : RectangleSetter : RemoteServiceModule : RenderMesh : RenderMeshVisual : RenderObjectProvider : RenderTargetProvider : RetouchVisual : RotationOptions : SamplerWrapper : SamplerWrappers : ScanModule : SceneEvent : SceneObject : SceneObjectEvent : ScreenRegionComponent : ScreenRegionType : ScreenTextureProvider : ScreenTransform : ScriptComponent : ScriptObject : ScriptScene : SegmentationModel : SegmentationTextureProvider : SelectEndEventArgs : SelectStartEventArgs : SerializableWithUID : SessionCreationType : SessionShareType : Skin : SmileFinishedEvent : SmileStartedEvent : SnapImageCaptureEvent : SnapRecordStartEvent : SnapRecordStopEvent : SnapcodeFoundEvent : SnapcodeMarkerProvider : SpatialAudio : Spectrogram : SpectrogramBuilder : SplineComponent : SpriteAligner : SpriteVisual : StorageOptions : StorageScope : StretchMode : SurfaceOptions : TapEvent : TapEventArgs : Text : TextFill : TextFillMode : TextProvider : Texture : TextureProvider : TextureStretchMode : TileZone : TouchDataProvider : TouchEndEvent : TouchEndEventArgs : TouchMoveEvent : TouchMoveEventArgs : TouchStartEvent : TouchStartEventArgs : TrackedMesh : TrackedMeshFaceClassification : TrackedMeshHistogramResult : TrackedMeshHitTestResult : TrackedObject : TrackedPlane : TrackedPlaneHitTestResult : TrackedPlaneOrientation : TrackedPoint : TrackedPointComponent : TrackingMode : Transform : Transformer : TransformerBuilder : TransformerRotation : TriggerPrimaryEvent : TriggerPrimaryEventArgs : TurnOffEvent : TurnOnEvent : Type : UpdateEvent : UserContextSystem : UserInfo : VFXAsset : VFXComponent : Vec2AnimationTrack : Vec2AnimationTrackKeyFramed : Vec3AnimationTrack : Vec3AnimationTrackKeyFramed : Vec3AnimationTrackXYZ : Vec4AnimationTrack : Vec4AnimationTrackKeyFramed : VertexCache : VertexSimulationSettings : VerticalAlignment : VerticalOverflow : VideoStatus : VideoTextureProvider : Visual : WeatherCondition : WorldOptions : WorldRenderObjectProvider : WorldTrackingCapabilities : WorldTrackingMeshesAddedEvent : WorldTrackingMeshesRemovedEvent : WorldTrackingMeshesUpdatedEvent : WorldTrackingPlanesAddedEvent : WorldTrackingPlanesRemovedEvent : WorldTrackingPlanesUpdatedEvent : WorldTrackingResetEvent : WorldUpVector : WrapMode"
+      ValueTypeItemName: ""
+      VariablePublic: true
+  VariableID:
+    Variables:
+      VariableX: 2
+  VariableIDs:
+    Variables:
+      String: "1"
+SystemID: dev.snap.scripts

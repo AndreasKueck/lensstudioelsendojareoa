@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/8467efda-3270-4c29-bbe4-251b388aae7b>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> a140649b-d626-4e4b-8448-4096d467d1a2
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> a140649b-d626-4e4b-8448-4096d467d1a2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 2f04912b-39a3-4754-8b99-895e4c0eca1b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/2f04912b-39a3-4754-8b99-895e4c0eca1b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 28378729-5f5b-4d9f-947a-9f19946f9d6a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    planeNormal: false
+    planePos: false
+    rayDir: false
+    rayPos: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - rayPos: !<Vec3> {x: 0.000000, y: 1.000000, z: 0.000000}
+      rayDir: !<Vec3> {x: 0.000000, y: -1.000000, z: 0.000000}
+      planePos: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      planeNormal: !<Vec3> {x: 0.000000, y: 1.000000, z: 0.000000}
+  ScriptTypes:
+    -
+      {}
